@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailX UI Components Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .demo-section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .demo-section h2 {
+            margin-top: 0;
+            color: #212529;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .button-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎨 RetailX UI Components Demo</h1>
+        <p>This demo showcases the RetailX UI Components library built for the enterprise ecosystem.</p>
+        
+        <div class="demo-section">
+            <h2>📋 Component Library Overview</h2>
+            <p><strong>Package:</strong> @retailx/ui-components</p>
+            <p><strong>Technology:</strong> React + TypeScript</p>
+            <p><strong>Styling:</strong> CSS with BEM methodology</p>
+            <p><strong>Documentation:</strong> Storybook integration</p>
+            
+            <h3>🔗 Integration with RetailX Ecosystem</h3>
+            <ul>
+                <li><strong>retailx-orders-api</strong> - Order management service</li>
+                <li><strong>retailx-inventory-api</strong> - Inventory tracking service</li>
+                <li><strong>foo-legacy-notifications-api</strong> - Legacy notification system</li>
+                <li><strong>retailx-core-commons</strong> - Shared utilities and common code</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔘 Button Component</h2>
+            <p>Versatile button component with multiple variants and states.</p>
+            
+            <h3>Variants</h3>
+            <div class="button-showcase">
+                <button class="retailx-button retailx-button--primary retailx-button--medium">Primary</button>
+                <button class="retailx-button retailx-button--secondary retailx-button--medium">Secondary</button>
+                <button class="retailx-button retailx-button--danger retailx-button--medium">Danger</button>
+                <button class="retailx-button retailx-button--outline retailx-button--medium">Outline</button>
+            </div>
+            
+            <h3>Sizes</h3>
+            <div class="button-showcase">
+                <button class="retailx-button retailx-button--primary retailx-button--small">Small</button>
+                <button class="retailx-button retailx-button--primary retailx-button--medium">Medium</button>
+                <button class="retailx-button retailx-button--primary retailx-button--large">Large</button>
+            </div>
+            
+            <h3>States</h3>
+            <div class="button-showcase">
+                <button class="retailx-button retailx-button--primary retailx-button--medium retailx-button--loading">
+                    <span class="retailx-button__spinner"></span>
+                    <span class="retailx-button__content retailx-button__content--loading">Loading...</span>
+                </button>
+                <button class="retailx-button retailx-button--primary retailx-button--medium" disabled>Disabled</button>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📄 Card Component</h2>
+            <p>Flexible card component for structured content display.</p>
+            
+            <div class="component-grid">
+                <div class="retailx-card retailx-card--default retailx-card--medium">
+                    <div class="retailx-card__header">
+                        <div class="retailx-card__header-content">
+                            <h3 class="retailx-card__title">Default Card</h3>
+                            <p class="retailx-card__subtitle">Standard card variant</p>
+                        </div>
+                    </div>
+                    <div class="retailx-card__body">
+                        This is a default card with standard styling and shadow effects.
+                    </div>
+                </div>
+                
+                <div class="retailx-card retailx-card--elevated retailx-card--medium">
+                    <div class="retailx-card__header">
+                        <div class="retailx-card__header-content">
+                            <h3 class="retailx-card__title">Elevated Card</h3>
+                            <p class="retailx-card__subtitle">Enhanced shadow</p>
+                        </div>
+                    </div>
+                    <div class="retailx-card__body">
+                        This elevated card stands out with enhanced shadow effects.
+                    </div>
+                </div>
+                
+                <div class="retailx-card retailx-card--outlined retailx-card--medium">
+                    <div class="retailx-card__header">
+                        <div class="retailx-card__header-content">
+                            <h3 class="retailx-card__title">Outlined Card</h3>
+                            <p class="retailx-card__subtitle">Clear boundaries</p>
+                        </div>
+                    </div>
+                    <div class="retailx-card__body">
+                        This outlined card provides clear boundaries without heavy shadows.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎯 Installation & Usage</h2>
+            <p>Install the component library locally:</p>
+            <pre><code>npm install ../retailx-ui-components</code></pre>
+            
+            <p>Import and use components:</p>
+            <pre><code>import { Button, Header, Card } from '@retailx/ui-components';</code></pre>
+            
+            <h3>🎨 Storybook Development</h3>
+            <p>Run Storybook for interactive component development:</p>
+            <pre><code>cd retailx-ui-components
+npm install
+npm run storybook</code></pre>
+        </div>
+
+        <div class="demo-section">
+            <h2>🚧 Development TODOs</h2>
+            <h3>Button Component</h3>
+            <ul>
+                <li>Add icon support for buttons</li>
+                <li>Implement focus management for accessibility</li>
+                <li>Add animation transitions for hover states</li>
+            </ul>
+            
+            <h3>Header Component</h3>
+            <ul>
+                <li>Add responsive mobile menu functionality</li>
+                <li>Implement breadcrumb navigation support</li>
+                <li>Add user profile dropdown integration</li>
+                <li>Support for search bar integration</li>
+            </ul>
+            
+            <h3>Card Component</h3>
+            <ul>
+                <li>Add image support for card headers</li>
+                <li>Implement collapsible card functionality</li>
+                <li>Add drag and drop support for reorderable cards</li>
+                <li>Create card grid layout utilities</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Include component styles -->
+    <link rel="stylesheet" href="src/components/Button/Button.css">
+    <link rel="stylesheet" href="src/components/Header/Header.css">
+    <link rel="stylesheet" href="src/components/Card/Card.css">
+</body>
+</html>
